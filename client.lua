@@ -7,7 +7,7 @@ local currentMaskIndex = nil
 
 local function notify(message, type)
 	if lib and lib.notify then
-		lib.notify({ title = Config.MenuTitle, description = message, type = type or Config.NotifyType })
+        lib.notify({ title = Config.MenuTitle, description = message, type = type or 'inform' })
 	else
 		SetNotificationTextEntry('STRING')
 		AddTextComponentString(message)

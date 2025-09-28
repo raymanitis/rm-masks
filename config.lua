@@ -6,8 +6,6 @@ Config.MenuTitle = 'Masks'
 -- Bone index for head (SKEL_Head)
 Config.HeadBone = 31086
 
--- Default notification type for ox_lib
-Config.NotifyType = 'inform'
 
 -- Define your masks here. Adjust offset/rotation per model for perfect fit.
 Config.Masks = {
