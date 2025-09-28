@@ -1,6 +1,6 @@
-# Qbox Masks Script
+# RM-Masks Script For Peds
 
-A lightweight FiveM script for **attaching custom masks** to peds (non-freemode models) using [ox_lib](https://overextended.dev/ox_lib) menus.
+A lightweight FiveM script for **attaching custom masks** to peds using [ox_lib](https://overextended.dev/ox_lib) menus.
 
 ### ✨ Features
 
