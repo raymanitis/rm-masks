@@ -57,6 +57,7 @@ local function attachMask(mask)
 	currentMask = obj
 end
 
+-- Build menu options from config
 local function buildOptions()
 	local options = {}
 	for i, mask in ipairs(Config.Masks) do
@@ -68,6 +69,7 @@ local function buildOptions()
 	return options
 end
 
+-- Register ox_lib menu
 lib.registerMenu({
 	id = 'ray_masks_menu',
 	title = Config.MenuTitle,
@@ -94,6 +96,7 @@ lib.registerMenu({
 	end
 end)
 
+-- Command to toggle mask menu or remove current mask when reselecting
 RegisterCommand(Config.Command, function()
 	local ped = PlayerPedId()
 	local model = GetEntityModel(ped)
@@ -113,6 +116,9 @@ RegisterCommand(Config.Command, function()
 	lib.showMenu('ray_masks_menu')
 end, false)
 
+-- Ensure only one mask at a time (already enforced by deleteCurrentMask before attaching)
+
+-- Cleanup on resource stop
 AddEventHandler('onResourceStop', function(res)
 	if res ~= GetCurrentResourceName() then return end
 	deleteCurrentMask()

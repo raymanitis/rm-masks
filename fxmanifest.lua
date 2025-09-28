@@ -1,20 +1,20 @@
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
+use_experimental_fxv2_oal "yes"
 
 author 'RM-SCRIPTS'
 description 'Masks for peds'
 version '1.0.0'
 
-shared_script '@ox_lib/init.lua'
-server_script {
-    'server.lua'
+shared_scripts {
+    '@ox_lib/init.lua',
+    'config.lua',
 }
 
-client_script {
-    'client.lua'
+client_scripts {
+    'client.lua',
 }
 
-files {
-    'config.lua'
-}
+client_script 'client.lua'
+
